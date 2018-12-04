@@ -1,0 +1,45 @@
+roles:
+  - entry
+  
+validate:
+  names:
+    title:
+      validators: commonRequiredValidator
+      variables:
+        FIELD_NAME: タイトル
+
+    start.day:
+      validators: commonDateValidator
+      variables:
+        YEAR_FIELD: start.year
+        MONTH_FIELD: start.month
+        DAY_FIELD: start.day
+        ALLOW_PAST: FALSE
+        ALLOW_CURRENT: FALSE
+        ALLOW_FUTURE: TRUE
+
+    locationPrefectureId:
+      validators: commonRequiredValidator
+      variables:
+        FIELD_NAME: 都道府県
+        
+    body:
+      validators: commonRequiredValidator
+      variables:
+        FIELD_NAME: イベント詳細
+        
+
+    deadline.day:
+      validators: commonDateValidator
+      variables:
+        YEAR_FIELD: deadline.year
+        MONTH_FIELD: deadline.month
+        DAY_FIELD: deadline.day
+        ALLOW_PAST: FALSE
+        ALLOW_CURRENT: FALSE
+        ALLOW_FUTURE: TRUE
+
+view:
+  success: community/event_add_confirm.tpl
+  error:
+    forward: EventAddForm

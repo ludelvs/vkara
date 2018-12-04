@@ -1,0 +1,5 @@
+roles:
+  - entry
+  
+view:
+  success: event/includes/newest_comment_count.tpl

@@ -1,0 +1,6 @@
+pager:
+  nextLabel: '次へ'
+  previousLabel: '前へ'
+  navigationLabel: '\1-\2 件表示 / \3 件中 \4 \5<br />\6'
+  ascendingLabel: '▲'
+  descendingLabel: '▼'

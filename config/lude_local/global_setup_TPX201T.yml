@@ -1,0 +1,29 @@
+module:
+  entry: 'entry'
+  unknown:
+    module: 'entry'
+    action: Index
+
+action:
+  path: underscore
+  suffix: .html
+
+exception:
+  - type: Exception
+    delegate: Mars_ExceptionLoggingHandler
+    continue: TRUE
+
+  - type: Exception
+    delegate: Mars_ExceptionStackTraceHandler
+
+charset:
+  default: UTF-8
+  mime: ISO-2022-JP
+
+debug:
+  output: TRUE
+  
+autoload:
+  - D:/svn/mars_community/source/plugin.dtx-mars.com/template
+  - D:/svn/mars_community/source/plugin.dtx-mars.com/net/service
+  - D:/svn/mars_community/source/plugin.dtx-mars.com/function

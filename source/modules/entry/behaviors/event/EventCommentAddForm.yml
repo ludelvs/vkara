@@ -1,0 +1,6 @@
+roles:
+  - entry
+        
+view:
+  success: event/event_comment_add_form.tpl
+  eventSelect: event/includes/event_comment_add_form_contents.tpl

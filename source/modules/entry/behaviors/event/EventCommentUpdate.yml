@@ -1,0 +1,6 @@
+roles:
+  - entry
+  
+view:
+  success:
+    redirect: EventList

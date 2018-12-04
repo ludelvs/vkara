@@ -1,0 +1,32 @@
+module:
+  entry: 'entry'
+  unknown:
+    module: 'entry'
+    action: Index
+
+action:
+  path: underscore
+  suffix: .html
+
+exception:
+  - type: Exception
+    delegate: Mars_ExceptionLoggingHandler
+    continue: TRUE
+
+  - type: Exception
+    delegate: Mars_ExceptionStackTraceHandler
+
+charset:
+  default: UTF-8
+  mime: ISO-2022-JP
+
+debug:
+  output: FALSE
+
+
+autoload:
+  - /var/lib/mars_plugin/template
+  - /var/lib/mars_plugin/net/service
+  - /var/lib/mars_plugin/function
+  - /var/lib/mars_plugin/helper
+  - /var/lib/mars_plugin/batch

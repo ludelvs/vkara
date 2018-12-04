@@ -1,0 +1,5 @@
+roles:
+  - entry
+
+view:
+  success: account/account_edit_form.tpl

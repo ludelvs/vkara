@@ -1,0 +1,14 @@
+roles:
+  - entry
+  
+validate:
+  names:
+    comment:
+      validators: commonRequiredValidator
+      variables:
+        FIELD_NAME: コメント
+        
+view:
+  success: event/event_comment_add_confirm.tpl
+  error:
+    forward: EventCommentAddForm

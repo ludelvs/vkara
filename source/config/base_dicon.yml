@@ -1,0 +1,28 @@
+componentNames:
+  request:
+    class: Mars_HttpRequest
+
+  response:
+    class: Mars_HttpResponse
+
+  session:
+    class: Mars_HttpSession
+
+  user:
+    class: Mars_AuthorityUser
+
+  form:
+    class: Mars_ActionForm
+
+  messages:
+    class: Mars_ActionMessages
+
+  renderer:
+    class: Mars_BaseRenderer
+
+  database:
+    class: Mars_PDOConnector
+
+imports:
+  - libs/service/*
+  - libs/dao/*

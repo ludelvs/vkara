@@ -1,0 +1,1 @@
+<p>mars <?php echo mars_version() ?></p>

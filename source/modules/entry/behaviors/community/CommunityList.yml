@@ -1,0 +1,5 @@
+roles:
+  - entry
+  
+view:
+  success: community/community_list.tpl

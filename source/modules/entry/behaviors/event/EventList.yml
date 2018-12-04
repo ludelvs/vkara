@@ -1,0 +1,6 @@
+roles:
+  - entry
+  
+view:
+  success: event/event_list.tpl
+  mixiEventListTable: event/includes/mixi_event_list_table.tpl

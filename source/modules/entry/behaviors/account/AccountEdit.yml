@@ -1,0 +1,71 @@
+roles:
+  - entry
+  
+validate:
+  names:
+    loginId:
+      validators: commonRequiredValidator
+      variables:
+        FIELD_NAME: ログインID
+        
+    managerName:
+      validators: commonRequiredValidator
+      variables:
+        FIELD_NAME: アカウント名
+
+    loginPassword:
+      validators: commonLengthValidator
+      variables:
+        FIELD_NAME: ログインパスワード
+        MIN_LENGTH: 4
+        MAX_LENGTH: 8
+
+    loginPasswordVerify:
+      validators: commonCompareValidator
+      variables:
+        FIELD_NAME: ログインパスワード(確認)
+        COMPARE_FIELD1: loginPassword
+        COMPARE_FIELD_NAME1: 'ログインパスワード'
+        COMPARE_FIELD2: loginPasswordVerify
+        
+    mixiAccountId:
+      validators: commonRequiredValidator, commonNumericValidator
+      variables:
+        FIELD_NAME: mixiID        
+        
+    mailAddress:
+      validators: commonRequiredValidator, commonEMailValidator
+      variables:
+        FIELD_NAME: メールアドレス
+
+    mixiPassword:
+      validators: commonLengthValidator
+      variables:
+        FIELD_NAME: mixiパスワード
+        MIN_LENGTH: 4
+        MAX_LENGTH: 16
+
+    mixiPasswordVerify:
+      validators: commonCompareValidator
+      variables:
+        FIELD_NAME: mixiパスワード(確認)
+        COMPARE_FIELD1: mixiPassword
+        COMPARE_FIELD_NAME1: 'mixiパスワード'
+        COMPARE_FIELD2: mixiPasswordVerify
+        
+    communityGroupId:
+      validators: commonRequiredValidator, commonNumericValidator
+      variables:
+        FIELD_NAME: コミュニティグループID
+
+  validators:
+    passwordMaskValidator:
+      class: Mars_MaskValidator
+      mask: '/^(?=.*\d)(?=.*[a-z])\w{1,}$/'
+      matchError: パスワードは英数字を組み合わせて下さい。
+
+view:
+  success:
+    forward: AccountEditForm
+  error:
+    forward: AccountEditForm

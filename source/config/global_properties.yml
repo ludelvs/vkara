@@ -1,0 +1,20 @@
+database:
+  default:
+    dsn: mysql:host=localhost; dbname=
+    user:
+    password:
+
+logger:
+  errorFileAppender:
+    class: Mars_LoggerFileAppender
+    file: error.log
+    rotate:
+      type: date
+      datePattern: Y-m
+
+cpanel:
+  password: 2ea6de
+
+eventStatusType:
+  1: 有効
+  2: 無効

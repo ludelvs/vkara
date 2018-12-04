@@ -1,0 +1,5 @@
+roles:
+  - entry
+
+view:
+  success: community/event_add_form.tpl

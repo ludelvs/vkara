@@ -1,0 +1,27 @@
+pager:
+  nextLabel: 次へ
+  previousLabel: 前へ
+  navigationLabel: '\1-\2 件表示 / \3 件中 \4 \5<br />\6'
+  ascendingLabel: '<img src="/common/base/mars/images/sort_asc.png" width="7" height="7" alt="昇順に並び替え" />'
+  descendingLabel: '<img src="/common/base/mars/images/sort_desc.png" width="7" height="7" alt="降順に並び替え" />'
+
+form:
+  class: CustomFormHelper  
+  error: TRUE
+  bind: true
+  containErrors: >
+    正しく入力されていない項目があります。(残り
+    \1 箇所)
+  errorFieldTag: '<div class="field_error_message">\1</div>'
+
+html:
+  class: CustomHTMLHelper
+  jsMinify: TRUE
+  cssMinify: TRUE
+
+custom:
+  class: CustomHelper
+  assign: custom
+  bind: TRUE
+  error: FALSE
+  fieldTag: "\1"

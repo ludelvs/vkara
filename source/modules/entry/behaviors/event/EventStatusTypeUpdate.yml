@@ -1,0 +1,5 @@
+roles:
+  - entry
+  
+view:
+  success: event/includes/mixi_event_list_table.tpl

@@ -1,0 +1,8 @@
+roles:
+  - entry
+  
+view:
+  success:
+    forward: EventList
+  error:
+    forward: EventUploadForm

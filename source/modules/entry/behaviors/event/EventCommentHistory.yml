@@ -1,0 +1,6 @@
+roles:
+  - entry
+  
+view:
+  success: event/event_comment_history.tpl
+  eventSelect: event/includes/event_comment_history_contents.tpl

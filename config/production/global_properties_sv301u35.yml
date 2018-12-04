@@ -1,0 +1,31 @@
+database:
+  default:
+    dsn: mysql:host=localhost; dbname=vkara; charset=utf8
+    user: webapp
+    password: $password
+
+logger:
+  errorFileAppender:
+    class: Mars_LoggerFileAppender
+    file: error.log
+    rotate:
+      type: date
+      datePattern: Y-m
+
+  mailAppender:
+    class: Mars_LoggerMailAppender
+    exception: detail
+    from: notice@bit-server.thruhere.net
+    to: kouda@dtx.co.jp
+
+minify:
+  js:
+    bootstrap:
+      - "bootstrap/bootstrap-alerts.js"
+      - "bootstrap/bootstrap-buttons.js"
+      - "bootstrap/bootstrap-dropdown.js"
+      - "bootstrap/bootstrap-modal.js"
+      - "bootstrap/bootstrap-popover.js"
+      - "bootstrap/bootstrap-scrollspy.js"
+      - "bootstrap/bootstrap-tabs.js"
+      - "bootstrap/bootstrap-twipsy.js"

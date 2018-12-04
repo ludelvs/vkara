@@ -1,0 +1,6 @@
+initializeFilter:
+  class: InitializeFilter
+
+loginCheck:
+  class: RoleAuthenticationFilter
+  enable: TRUE

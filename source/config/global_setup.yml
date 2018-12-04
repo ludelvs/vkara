@@ -1,0 +1,31 @@
+module:
+  entry: 'entry'
+  unknown:
+    module: 'entry'
+    action: Index
+
+action:
+  path: underscore
+  suffix: .html
+
+exception:
+  - type: Exception
+    delegate: Mars_ExceptionLoggingHandler
+    continue: TRUE
+
+  - type: Exception
+    delegate: Mars_ExceptionStackTraceHandler
+
+error:
+  catchLevel: <?php echo E_ALL^E_NOTICE ?>
+
+charset:
+  default: UTF-8
+  mime: ISO-2022-JP
+
+debug:
+  output: TRUE
+
+php:
+  display_errors: Off
+  error_log: <?php echo APP_ROOT_DIR . '/logs/php_error.log'; ?>
